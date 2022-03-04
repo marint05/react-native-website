@@ -1,0 +1,83 @@
+import React from 'react';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
+
+const Separator = () => (
+  <View style={styles.separator} />
+);
+
+const App = () => (
+  <SafeAreaView style={styles.container}>
+    <View>
+      <Text style={styles.title}>
+        
+      </Text>
+      <Button
+        title="Español"
+        onPress={() => Alert.alert('Esta aplicacion fue creada por Eroldan, Marisabel y Wilmer')}
+      />
+    </View>
+    <Separator />
+    <View>
+      <Text style={styles.title}>
+        
+      </Text>
+      <Button
+        title="English"
+        color="#f194ff"
+        onPress={() => Alert.alert('This App was created by Eroldan, Marisabel y Wilmer')}
+      />
+    </View>
+    <Separator />
+    <View>
+      <Text style={styles.title}>
+        
+      </Text>
+      <Button
+        title="Français"
+        
+        onPress={() => Alert.alert('cette application a été créée par Eroldan, Marisabel et Wilmer')}
+      />
+    </View>
+    <Separator />
+    <View>
+      <Text style={styles.title}>
+        
+      </Text>
+      <View style={styles.fixToText}>
+        <Button
+          title="Left button"
+          disabled
+          onPress={() => Alert.alert('Left button pressed')}
+        />
+        <Button
+          title="Right button"
+          disabled
+          onPress={() => Alert.alert('Right button pressed')}
+        />
+      </View>
+    </View>
+  </SafeAreaView>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 16,
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
+
+export default App;
